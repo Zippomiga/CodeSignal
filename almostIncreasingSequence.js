@@ -16,9 +16,9 @@
 
 function solution(sequence) {
     let flag = 0;
-    for(let i = 0; i < sequence.length; i++){
-        if (sequence[i] <= sequence[i-1]) flag++;
-        if (sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1]) flag++;
+    for(let i = 0; i < sequence.length; i++) {
+        if(sequence[i] <= sequence[i-1]) flag++;
+        if(sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1]) flag++;
     }
     return flag < 2;
 }
