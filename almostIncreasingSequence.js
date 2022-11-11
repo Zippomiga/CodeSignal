@@ -15,18 +15,10 @@
 // You can remove 3 from the array to get the strictly increasing sequence [1, 2]. Alternately, you can remove 2 to get the strictly increasing sequence [1, 3].
 
 function solution(sequence) {
-    let flag = 0
-    
-    for(let i = 0; i < sequence.length; i++) {
-        if(flag === 2) break
-        if(sequence[i] >= sequence[i+1]) {
-            flag++
-
-            if(i !== 0 && sequence[i] >= sequence[i+2]) {
-                if(sequence[i-1] >= sequence[i+1]) flag++
-            }
-        }
-    } 
-
-    return flag < 2
+    let flag = 0;
+    for(let i = 0; i < sequence.length; i++){
+        if (sequence[i] <= sequence[i-1]) flag++;
+        if (sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1]) flag++;
+    }
+    return flag < 2;
 }
