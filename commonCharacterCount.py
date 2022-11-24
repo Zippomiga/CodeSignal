@@ -9,10 +9,10 @@
 
 
 def solution(s1, s2):
-    def ab(e): return len(e)
-    asc = [s1, s2]
-    asc.sort(key=ab)
-    sMin, sMax, C = list(asc[0]), list(asc[1]), 0
+    def a_z(e): return len(e)
+    strs = [s1, s2]
+    strs.sort(key=a_z)
+    sMin, sMax, C = list(strs[0]), list(strs[1]), 0
 
     for x in sMin:
         if x in sMax:
