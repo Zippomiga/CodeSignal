@@ -15,9 +15,7 @@
 # Because "foo(bar(baz))blim" becomes "foo(barzab)blim" and then "foobazrabblim".
 
 
-def solution(inputString):
-    S = inputString
-    
+def solution(S):
     while "(" in S:
         op = S.rfind("(")
         cl = S.find(")", op)
